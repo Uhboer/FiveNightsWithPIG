@@ -1,6 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://d02uailrsvx3s"]
+[gd_scene load_steps=8 format=3 uid="uid://d02uailrsvx3s"]
 
+[ext_resource type="Script" path="res://tscns + scripts/character.gd" id="1_6e2sr"]
 [ext_resource type="Texture2D" uid="uid://dnq2kmqp1tkji" path="res://sprites/character1.png" id="1_llkow"]
+[ext_resource type="Texture2D" uid="uid://buothay0e7bdc" path="res://sprites/character2.png" id="3_ad22f"]
+[ext_resource type="Texture2D" uid="uid://7nxpmaglb7p2" path="res://sprites/character3.png" id="4_kcrw8"]
+[ext_resource type="PackedScene" uid="uid://b3cqtcym3ojek" path="res://tscns + scripts/vinietka.tscn" id="5_r11i8"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_wn0bj"]
 radius = 9.05539
@@ -14,9 +18,21 @@ animations = [{
 "loop": true,
 "name": &"Idle",
 "speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_ad22f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_kcrw8")
+}],
+"loop": true,
+"name": &"Run",
+"speed": 10.0
 }]
 
 [node name="character" type="CharacterBody2D"]
+script = ExtResource("1_6e2sr")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_wn0bj")
@@ -25,3 +41,10 @@ shape = SubResource("CircleShape2D_wn0bj")
 scale = Vector2(0.5625, 0.625)
 sprite_frames = SubResource("SpriteFrames_n64fq")
 animation = &"Idle"
+autoplay = "Idle"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(2.715, 2.715)
+
+[node name="VINIETKA" parent="." instance=ExtResource("5_r11i8")]
+position = Vector2(0, 2)
