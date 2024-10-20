@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://b3cqtcym3ojek"]
+[gd_scene load_steps=4 format=3 uid="uid://b3cqtcym3ojek"]
 
 [ext_resource type="Texture2D" uid="uid://ouvylgfq4ub6" path="res://sprites/vinietka.png" id="1_axtvs"]
 [ext_resource type="Script" path="res://tscns + scripts/vinietka.gd" id="1_m6jwl"]
+[ext_resource type="Texture2D" uid="uid://b2ub247phnlfu" path="res://sprites/vinietkabad.png" id="2_8c6nx"]
 
 [node name="VINIETKA" type="Node2D"]
 script = ExtResource("1_m6jwl")
@@ -10,3 +11,9 @@ script = ExtResource("1_m6jwl")
 rotation = -1.57402
 scale = Vector2(1.775, 1.97083)
 texture = ExtResource("1_axtvs")
+
+[node name="vinientka_bad" type="Sprite2D" parent="."]
+visible = false
+rotation = -1.57402
+scale = Vector2(1.775, 1.97083)
+texture = ExtResource("2_8c6nx")

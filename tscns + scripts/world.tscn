@@ -1,8 +1,25 @@
-[gd_scene load_steps=2 format=3 uid="uid://b14eojejk3757"]
+[gd_scene load_steps=4 format=3 uid="uid://b14eojejk3757"]
 
 [ext_resource type="PackedScene" uid="uid://d02uailrsvx3s" path="res://tscns + scripts/character.tscn" id="1_c5a0f"]
+[ext_resource type="PackedScene" uid="uid://cbowvywpt7tsh" path="res://tscns + scripts/branch.tscn" id="2_ml8x4"]
+[ext_resource type="PackedScene" uid="uid://bqy07w0i4c2xt" path="res://tscns + scripts/tree.tscn" id="2_yf1oi"]
 
 [node name="world" type="Node2D"]
+
+[node name="branch" parent="." instance=ExtResource("2_ml8x4")]
+position = Vector2(26, -16)
+
+[node name="tree" parent="." instance=ExtResource("2_yf1oi")]
+position = Vector2(-67, 84)
+
+[node name="tree2" parent="." instance=ExtResource("2_yf1oi")]
+position = Vector2(-71, -110)
+
+[node name="tree3" parent="." instance=ExtResource("2_yf1oi")]
+position = Vector2(116, -79)
+
+[node name="tree4" parent="." instance=ExtResource("2_yf1oi")]
+position = Vector2(84, 45)
 
 [node name="character" parent="." instance=ExtResource("1_c5a0f")]
 position = Vector2(6, 5)
