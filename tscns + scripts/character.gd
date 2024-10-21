@@ -4,7 +4,7 @@ extends CharacterBody2D
 
 var health = 5
 
-var have_axe = true
+var have_axe = false
 
 @onready var anim = $AnimatedSprite2D
 

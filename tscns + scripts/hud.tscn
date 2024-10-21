@@ -1,0 +1,38 @@
+[gd_scene load_steps=4 format=3 uid="uid://sx1fw0cnqxvy"]
+
+[ext_resource type="Texture2D" uid="uid://b6ici6jyvgmyl" path="res://sprites/button.png" id="1_0msuv"]
+[ext_resource type="Script" path="res://tscns + scripts/hud.gd" id="1_qfrnc"]
+[ext_resource type="FontFile" uid="uid://wymafa7y0t7r" path="res://font/KarmaFuture.ttf" id="2_85gho"]
+
+[node name="HUD" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_qfrnc")
+
+[node name="craft_menu" type="ItemList" parent="."]
+visible = false
+layout_mode = 0
+offset_left = -50.0
+offset_top = -65.0
+offset_right = 58.0
+offset_bottom = 78.0
+theme_override_fonts/font = ExtResource("2_85gho")
+select_mode = 1
+max_text_lines = 3
+item_count = 2
+item_0/text = "axe"
+item_0/icon = ExtResource("1_0msuv")
+item_1/text = "tourch"
+item_1/icon = ExtResource("1_0msuv")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 272.0
+offset_top = -194.0
+offset_right = 348.0
+offset_bottom = -158.0
+theme_override_fonts/font = ExtResource("2_85gho")
+text = "craft"
+
+[connection signal="item_activated" from="craft_menu" to="." method="_on_craft_menu_item_activated"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

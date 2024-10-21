@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://d02uailrsvx3s"]
+[gd_scene load_steps=10 format=3 uid="uid://d02uailrsvx3s"]
 
 [ext_resource type="Script" path="res://tscns + scripts/character.gd" id="1_6e2sr"]
 [ext_resource type="Texture2D" uid="uid://dnq2kmqp1tkji" path="res://sprites/character1.png" id="1_llkow"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://7nxpmaglb7p2" path="res://sprites/character3.png" id="4_kcrw8"]
 [ext_resource type="PackedScene" uid="uid://b3cqtcym3ojek" path="res://tscns + scripts/vinietka.tscn" id="5_r11i8"]
 [ext_resource type="Texture2D" uid="uid://boi3k11g3bgqb" path="res://sprites/character_axe.png" id="6_1jm2t"]
+[ext_resource type="PackedScene" uid="uid://sx1fw0cnqxvy" path="res://tscns + scripts/hud.tscn" id="7_x2b5r"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_wn0bj"]
 radius = 9.05539
@@ -56,3 +57,7 @@ position = Vector2(0, 2)
 visible = false
 scale = Vector2(0.5625, 0.625)
 texture = ExtResource("6_1jm2t")
+
+[node name="HUD" parent="." instance=ExtResource("7_x2b5r")]
+offset_left = -2.0
+offset_right = -2.0

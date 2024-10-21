@@ -1,5 +1,11 @@
 extends StaticBody2D
 
+
+
+func _ready():
+	var rng = RandomNumberGenerator.new()
+	print(rng.randi_range(0, 3))
+
 func _process(delta):
 	pass
 
