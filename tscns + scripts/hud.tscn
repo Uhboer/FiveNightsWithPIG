@@ -1,8 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://sx1fw0cnqxvy"]
+[gd_scene load_steps=7 format=3 uid="uid://sx1fw0cnqxvy"]
 
 [ext_resource type="Texture2D" uid="uid://b6ici6jyvgmyl" path="res://sprites/button.png" id="1_0msuv"]
 [ext_resource type="Script" path="res://tscns + scripts/hud.gd" id="1_qfrnc"]
 [ext_resource type="FontFile" uid="uid://wymafa7y0t7r" path="res://font/KarmaFuture.ttf" id="2_85gho"]
+[ext_resource type="Texture2D" uid="uid://3uum7e0iu8v4" path="res://sprites/wood.png" id="4_a73i8"]
+[ext_resource type="Texture2D" uid="uid://gk4t11mv74e2" path="res://sprites/stoneicon.png" id="5_ib3fx"]
+[ext_resource type="Texture2D" uid="uid://7utbbcbeiqq6" path="res://sprites/fibers.png" id="6_yy4ls"]
 
 [node name="HUD" type="Control"]
 layout_mode = 3
@@ -12,9 +15,9 @@ script = ExtResource("1_qfrnc")
 [node name="craft_menu" type="ItemList" parent="."]
 visible = false
 layout_mode = 0
-offset_left = -50.0
+offset_left = -54.0
 offset_top = -65.0
-offset_right = 58.0
+offset_right = 62.0
 offset_bottom = 78.0
 theme_override_fonts/font = ExtResource("2_85gho")
 select_mode = 1
@@ -33,6 +36,48 @@ offset_right = 348.0
 offset_bottom = -158.0
 theme_override_fonts/font = ExtResource("2_85gho")
 text = "craft"
+
+[node name="fibers" type="Label" parent="."]
+layout_mode = 0
+offset_left = -325.0
+offset_top = -141.0
+offset_right = -253.0
+offset_bottom = -118.0
+theme_override_fonts/font = ExtResource("2_85gho")
+text = "fibers: 0"
+
+[node name="stone" type="Label" parent="."]
+layout_mode = 0
+offset_left = -321.0
+offset_top = -167.0
+offset_right = -254.0
+offset_bottom = -144.0
+theme_override_fonts/font = ExtResource("2_85gho")
+text = "stone: 0"
+
+[node name="wood" type="Label" parent="."]
+layout_mode = 0
+offset_left = -316.0
+offset_top = -193.0
+offset_right = -256.0
+offset_bottom = -170.0
+theme_override_fonts/font = ExtResource("2_85gho")
+text = "wood: 0"
+
+[node name="woodicon" type="Sprite2D" parent="."]
+position = Vector2(-331, -183)
+scale = Vector2(0.9375, 0.875)
+texture = ExtResource("4_a73i8")
+
+[node name="stoneicon" type="Sprite2D" parent="."]
+position = Vector2(-337, -157)
+scale = Vector2(1, 0.875)
+texture = ExtResource("5_ib3fx")
+
+[node name="fibersicon" type="Sprite2D" parent="."]
+position = Vector2(-340, -131)
+scale = Vector2(0.999999, 0.765626)
+texture = ExtResource("6_yy4ls")
 
 [connection signal="item_activated" from="craft_menu" to="." method="_on_craft_menu_item_activated"]
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

@@ -14,4 +14,5 @@ func _on_body_exited(body):
 
 
 func _on_button_pressed():
+	$"../character".wood += 1
 	queue_free()

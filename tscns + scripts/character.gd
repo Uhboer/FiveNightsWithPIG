@@ -6,6 +6,10 @@ var health = 5
 
 var have_axe = false
 
+var wood = 0
+var stone = 0
+var fibers = 0
+
 @onready var anim = $AnimatedSprite2D
 
 var running = false

@@ -9,6 +9,12 @@
 [node name="branch" parent="." instance=ExtResource("2_ml8x4")]
 position = Vector2(26, -16)
 
+[node name="branch2" parent="." instance=ExtResource("2_ml8x4")]
+position = Vector2(12, 64)
+
+[node name="branch3" parent="." instance=ExtResource("2_ml8x4")]
+position = Vector2(-47, -26)
+
 [node name="tree" parent="." instance=ExtResource("2_yf1oi")]
 position = Vector2(-67, 84)
 
@@ -20,6 +26,12 @@ position = Vector2(116, -79)
 
 [node name="tree4" parent="." instance=ExtResource("2_yf1oi")]
 position = Vector2(84, 45)
+
+[node name="tree5" parent="." instance=ExtResource("2_yf1oi")]
+position = Vector2(188, -4)
+
+[node name="tree6" parent="." instance=ExtResource("2_yf1oi")]
+position = Vector2(-132, -7)
 
 [node name="character" parent="." instance=ExtResource("1_c5a0f")]
 position = Vector2(6, 5)

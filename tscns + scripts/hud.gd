@@ -2,9 +2,12 @@ extends Control
 
 var visibility = false
 
+@onready var character = $".."
 
 func _process(delta):
-	pass
+	$wood.text = str("wood: ", character.wood)
+	$stone.text = str("wood: ", character.stone)
+	$fibers.text = str("wood: ", character.fibers)
 
 
 func _on_button_pressed():
